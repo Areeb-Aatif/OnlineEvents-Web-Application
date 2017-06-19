@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title>Registration</title>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/start.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript">
+           function Validateform(){
+		      
+			  var phone = document.getElementById('phone').value;
+			  var email = document.getElementById('email').value;
+			  var yes = document.getElementById('yes').checked;
+			  var no = document.getElementById('no').checked;
+			  var agreement = document.getElementById('agreement').checked;
+			  
+			  if(phone == "" || phone == "Phone"){
+			     alert("Phone Not Entered");
+				 return false;
+			  }
+			  else if(email == "" || email == "EMAIL"){
+			     alert("Email Not Entered");
+				 return false;
+			  }
+			  else if( yes == ""){
+			     alert("Payment Not Made");
+				 return false;
+			  }
+			  else if( agreement == ""){
+			     alert("Please Tick I Agree Checkbox");
+				 return false;
+			  }
+			  else{
+			     return true;
+			  }
+		   
+		   
+		   }
+		   
+        </script>
+
+	
+
+</head>
+<body background="images/abstract-hd-wallpaper-0079.jpg">
+	<img src="images/upcomingevents.jpg" height=120px width=400px style="float:left"></img><br>
+	<div class="box">
+  <div class="container-1">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="search" id="search" placeholder="Search..." />
+  </div>
+</div>
+	<br><br><br><br><br><br>
+<div id='cssmenu'>    
+	<ul>
+	     <li><a href="home.html">HOME</a></li>
+	     <li><a class="has-sub">EVENTS</a>
+		 <ul>
+		 <li><a class="has-sub" href="technical.html">TECHNICAL</a></li>
+		 <li><a class="has-sub" href="sports.html">SPORTS</a></li>
+		 <li><a class="has-sub" href="entertainment.html">ENTERTAINMENT</a></li>
+		 </ul>	 
+		 </li>
+			 
+	     <li><a href="workshop.html">WORKSHOPS</a></li>
+		 <li><a href="conferences.html">CONFERENCES</a></li>
+	</ul>
+</div>
+        
+	 <div class="main">
+		<div class="login-form">
+			<h1>	Registration<div class="head">
+						<img src="images/Register.jpg" alt="Register" height=150/>
+					</div>
+				<form action="register_config.php"  method="post" onsubmit="return Validateform()" >
+						<input type="text" name="phone" id="phone" class="text" value="Phone"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" >
+						<input type="email" name="email" id="email" class="text" value="EMAIL"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL';}" >
+				  <div class="radio">Payment :
+						<input type="radio" name="payment" id="yes" value="Yes">Yes
+						<input type="radio" name="payment" id="no" value="No">No
+						<br></div>
+						<h6><input type="checkbox" id="agreement" value=""> I agree to the Terms of Service and Privacy Policy.</input><br>
+						</h6>
+						<div class="submit">
+							<input type="submit" name="submit" value="Register" >
+					</div>	
+<br>
+				</form>
+			</div>
+			
+	    </div>	
+
+</body>
+</html>

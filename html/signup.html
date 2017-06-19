@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title>Signup Page</title>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/start.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript">
+           function Validateform(){
+		      
+			  var user = document.getElementById('user').value;
+			  var email = document.getElementById('email').value;
+			  var password = document.getElementById('password').value;
+			  var male = document.getElementById('male').checked;
+			  var female = document.getElementById('female').checked;
+			  var agree= document.getElementById('agreement').checked;
+			  
+			  if(user == "" || user == "USERNAME"){
+			     alert("Username Not Entered");
+				 return false;
+			  }
+			  else if(email == "" || email == "EMAIL"){
+			     alert("Email Not Entered");
+				 return false;
+			  }
+			  else if(password == "" || password == "password"){
+			     alert("password Not Entered");
+				 return false;
+			  }
+			  else if( male == "" && female == ""){
+			     alert("Gender Not Marked");
+				 return false;
+			  }
+			  else if( agree == ""){
+			     alert("Please Tick I Agree Checkbox");
+				 return false;
+			  }
+			  else{
+			     return true;
+			  }
+		   
+		   
+		   }
+		   
+        </script>
+
+	
+
+</head>
+<body background="images/abstract-hd-wallpaper-0079.jpg">
+	<img src="images/upcomingevents.jpg" height=120px width=400px style="float:left"></img><br>
+	<div class="box">
+  <div class="container-1">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="search" id="search" placeholder="Search..." />
+  </div>
+</div>
+	<br><br><br><br><br><br>
+<div id='cssmenu'>    
+	<ul>
+	     <li><a href="home.html">HOME</a></li>
+	     <li><a class="has-sub">EVENTS</a>
+		 <ul>
+		 <li><a class="has-sub" href="technical.html">TECHNICAL</a></li>
+		 <li><a class="has-sub" href="sports.html">SPORTS</a></li>
+		 <li><a class="has-sub" href="entertainment.html">ENTERTAINMENT</a></li>
+		 </ul>	 
+		 </li>
+			 
+	     <li><a href="workshop.html">WORKSHOPS</a></li>
+		 <li><a href="conferences.html">CONFERENCES</a></li>
+		 <li style="float:right"><a class="active" href="signup.html">SIGNUP</a></li>
+		 <li style="float:right"><a href="login.html">LOGIN</a></li>
+	</ul>
+</div>
+        
+	 <div class="main">
+		<div class="login-form">
+			<h1>Member Signup</h1>
+					<div class="head">
+						<img src="images/user.png" alt="USER"/>
+					</div>
+				<form action="validate.php"  method="post" onsubmit="return Validateform()" >
+						<input type="text" name="username" id="user" class="text" value="USERNAME"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+						<input type="email" name="email" id="email" class="text" value="EMAIL"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL';}" >
+						<input type="password" id="password" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}" >
+				  <div class="radio">Gender :
+						<input type="radio" name="gender" id="male" value="Male">Male
+						<input type="radio" name="gender" id="female" value="Female">Female
+						<br><br></div>
+						<input type="checkbox" id="agreement" value=""> I agree to the Terms of Service and Privacy Policy.</input><br>
+						<br>
+						<div class="submit">
+							<input type="submit" name="submit" value="SIGNUP" >
+					</div>	
+<br>
+				</form>
+			</div>
+			
+	    </div>	
+
+</body>
+</html>
